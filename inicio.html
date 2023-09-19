@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OXXO ® | A La Vuelta de Tu Vida</title>
+    <link rel="stylesheet" href="/styles/globales.css" />
+    <link rel="stylesheet" href="/styles/inicio.css" />
+    <link rel="shortcut icon" href="/img/logo-oxxo.png" type="image/x-icon" />
+    <script
+      src="https://kit.fontawesome.com/2e0e5d1ee9.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/js/glob.js"></script>
+  </head>
+  <body class="web-app">
+    <main>
+      <header class="wrapper pt-3">
+        <section class="top-header mg-l mg-r">
+          <div id="float-l">
+            <a
+              href="https://negocios2.buzonfiscal.com/comun/html/oxxo/guia/inicio.html"
+              class="text_dark"
+              >Facturación electrónica</a
+            >
+            <a href="https://www.oxxo.com/contacto" class="text_dark"
+              >Contacto</a
+            >
+          </div>
+          <div id="float-r">
+            <button
+              type="button"
+              id="country-button"
+              class="btn btn-primary btn-sm dropdown-toggle country-btn"
+              onclick="toggleDropdown()"
+            >
+              Tu país
+            </button>
+            <div
+              id="country-selector"
+              class="dropdown-menu country-selector"
+              style="
+                position: absolute;
+                will-change: transform;
+                top: 0px;
+                left: 0px;
+                transform: translate3d(0px, 26px, 0px);
+              "
+            >
+              <a href="https://www.oxxo.co" class="dropdown-item"> Colombia</a>
+              <a href="/inicio.html" class="dropdown-item"> México</a>
+              <a href="https://www.oxxo.cl" class="dropdown-item"> Chile</a>
+              <a href="https://www.oxxo.pe" class="dropdown-item"> Perú</a>
+              <a href="https://www.mercadooxxo.com.br" class="dropdown-item">
+                Brasil</a
+              >
+            </div>
+          </div>
+        </section>
+        <div id="oxxo-header">
+          <a href="/inicio.html">
+            <img src="/img/logo-oxxo.png" alt="" />
+          </a>
+          <div class="header-top"></div>
+          <div class="header-bottom"></div>
+        </div>
+        <nav class="navbar">
+          <div>
+            <ul class="dp-flex">
+              <li>
+                <a href="https://www.oxxo.com/cupones">Cupones</a>
+              </li>
+              <li>
+                <a href="./src/promociones.html">Promociones</a>
+              </li>
+              <li>
+                <a href="oxxopremia.oxxo.com">Spin Premia</a>
+              </li>
+              <li>
+                <a
+                  href="https://www.spinbyoxxo.com.mx/?source_caller=ui&pid=Website_OXXO&is_retargeting=true&utm_id=OXXO.com&utm_source=Menu&shortlink=s1ti0pzf&utm_medium=Link-Menu&af_ad=Header&c=Canales_OXXO"
+                  >Spin By Oxxo</a
+                >
+              </li>
+              <li>
+                <a href="https://www.oxxoandatti.com">andatti</a>
+              </li>
+              <li class="dropdown-parent">
+                <label for="servicios" class="dropdown-toggle">Servicios</label>
+                <input type="checkbox" id="servicios" class="checkbox-toggle" />
+                <ul id="menu-vertical-servicios" class="menu-vertical">
+                  <li>
+                    <a class="dropdown-item" href="https://www.oxxocel.com"
+                      >OXXO Cel</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="https://www.oxxo.com/pagos-depositos-tarjetas"
+                      >Depósitos y retiros de efectivo</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="https://www.oxxo.com/boletos-de-autobus"
+                      >Boletos de autobús</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="https://www.oxxo.com/terminales-de-pago"
+                      >Terminales de pago</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="https://www.oxxo.com/envios-de-dinero-internacional"
+                      >Envíos de dinero internacional</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="https://www.oxxo.com/oxxo-pay"
+                      >OXXO Pay</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="https://www.oxxo.com/telefonos-celulares-smartphones"
+                      >Telefonía</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="https://www.oxxo.com/pago-de-servicios"
+                      >Pago de servicios</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="https://www.oxxo.com/tarjetas-de-regalo"
+                      >Tarjetas de regalo</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="https://www.oxxo.com/envios-de-dinero"
+                      >Envíos de dinero nacional</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="https://www.oxxo.com/otros-servicios"
+                      >Otros servicios</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="https://www.oxxo.com/quienes-somos">Quiénes somos</a>
+              </li>
+              <li class="dropdown-parent">
+                <label for="proveedores" class="dropdown-toggle"
+                  >Proveedores</label
+                >
+                <input
+                  type="checkbox"
+                  id="proveedores"
+                  class="checkbox-toggle"
+                />
+                <ul
+                  id="menu-vertical-proveedores"
+                  class="menu-vertical menu-vertical-normal"
+                >
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="https://www.oxxo.com/proveedores"
+                      >Productos y servicios en tienda</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="https://www.oxxo.com/proveedores/contratistas"
+                      >Construcción y diseño</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="dropdown-parent">
+                <label for="braices" class="dropdown-toggle"
+                  >Bienes raíces</label
+                >
+                <input type="checkbox" id="braices" class="checkbox-toggle" />
+                <ul
+                  id="menu-vertical-braices"
+                  class="menu-vertical menu-vertical-normal"
+                >
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="https://oxxoinmuebles.com.mx/ofertar-terreno/"
+                      >Ofrezco un espacio</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="https://oxxoinmuebles.com.mx"
+                      >Busco un espacio</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="https://www.oxxo.com/tiendas?source=link-menu"
+                  >Localizador de tiendas</a
+                >
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <section id="home" class="carousel slide">
+        <ol class="carousel-indicators">
+          <li
+            id="selectHD0"
+            data-target="#home"
+            data-slide-to="0"
+            class="active"
+          ></li>
+        </ol>
+        <div
+          data-ride="carousel"
+          data-evg-campaign-id="RWonS"
+          data-evg-experience-id="Bdnv9"
+          data-evg-user-group="Test"
+          class="carousel-inner"
+        >
+          <div
+            id="elementHD0"
+            data-element_name="cie - Slide 1"
+            class="carousel-item active"
+          >
+            <a
+              data-element_name="cie - Slide 1"
+              href="https://mioxxo.page.link/45_aniversario"
+              data-evg-item-id="QtiXp"
+              data-evg-item-type="Promotion"
+              class="trace_event"
+              ><div role="banner" class="evg-banner-with-cta evg-jumbotron">
+                <picture
+                  ><source
+                    media="(min-width: 1001px)"
+                    srcset="
+                      https://cdn.evergage.com/promotions/femsacomercio/oxxomxprd/QtiXp/uzoi2.png
+                    " />
+                  <source
+                    media="(max-width: 640px)"
+                    srcset="
+                      https://cdn.evergage.com/promotions/femsacomercio/oxxomxprd/QtiXp/wBCGa.png
+                    " />
+                  <img
+                    src="https://cdn.evergage.com/promotions/femsacomercio/oxxomxprd/QtiXp/uzoi2.png"
+                    class="six-slide"
+                /></picture></div
+            ></a>
+          </div>
+        </div>
+        <a
+          href="/inicio.html"
+          role="button"
+          data-slide="prev"
+          class="carousel-control-prev"
+          ><span aria-hidden="true" class="carousel-control-prev-icon"></span>
+          <span class="sr-only">Previous</span></a
+        >
+        <a
+          href="/inicio.html"
+          role="button"
+          data-slide="next"
+          class="carousel-control-next"
+          ><span aria-hidden="true" class="carousel-control-next-icon"></span>
+          <span class="sr-only">Next</span></a
+        >
+      </section>
+      <aside>
+        <a href="https://survey3.medallia.com/?Oxxo-survey-web&Distrito=d_web">
+          <div id="btn-encuesta">
+            <h5>Cuentanos tu experiencia en OXXO</h5>
+          </div>
+        </a>
+      </aside>
+      <section class="container cont-float cont-floatm features-desktop">
+        <div id="centrar" class="row justify-content-md-center">
+          <a href="https://www.oxxo.com/reunion">
+            <img src="/img/reunion.png" alt="reunion" />
+          </a>
+          <a href="https://linktr.ee/oxxoreclutamiento">
+            <img src="/img/joinus.png" alt="reclutamiento" />
+          </a>
+          <a href="https://www.oxxo.com/tiendas?source=action-btn">
+            <img src="/img/tiendas.png" alt="tiendas" />
+          </a>
+        </div>
+      </section>
+      <section class="container destacados">
+        <h2 class="text-center">OXXO TE ACOMPAÑA EN CADA MOMENTO</h2>
+        <div class="row">
+          <div class="col-sm-6">
+            <a href="https://www.oxxo.com/historias-oxxo"
+              ><img
+                src="https://oxxo-com.s3.amazonaws.com/media-library/3988ef6eb76a4a3aef2299092510f949.png"
+                alt="Historias OXXO 40 Aniversario"
+                class="img-fluid"
+            /></a>
+          </div>
+          <div class="col-sm-6">
+            <a href="https://www.oxxo.com/conocenos"
+              ><img
+                src="https://oxxo-com.s3.amazonaws.com/media-library/9b364fdab9f521c8d64fe9ef38c73881.png"
+                alt="Conoce OXXO"
+                class="img-fluid"
+            /></a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6">
+            <a href="https://www.oxxo.com/blog"
+              ><img
+                src="https://oxxo-com.s3.amazonaws.com/media-library/cc9b080235831ec37d3ee6562647e593.png"
+                alt="Blog OXXO"
+                class="img-fluid"
+            /></a>
+          </div>
+        </div>
+      </section>
+      <footer class="footer">
+        <section class="container">
+          <div class="row">
+            <div class="col-sm-8 offset-sm-2 text-center">
+              <h6>¡Síguenos en nuestras Redes Sociales!</h6>
+              <p>
+                <a
+                  href="https://www.facebook.com/OXXOTiendas"
+                  class="icon-footer-font"
+                  ><i class="fa-brands fa-facebook fa-lg"></i
+                ></a>
+                <a
+                  href="https://twitter.com/Tiendas_OXXO"
+                  class="icon-footer-font"
+                  ><i class="fab fa-twitter fa-lg"></i
+                ></a>
+                <a
+                  href="https://www.instagram.com/tiendasoxxo/"
+                  class="icon-footer-font"
+                  ><i class="fab fa-instagram fa-lg"></i
+                ></a>
+                <a
+                  href="https://www.youtube.com/user/tiendaoxxo"
+                  class="icon-footer-font"
+                  ><i class="fab fa-youtube fa-lg"></i
+                ></a>
+              </p>
+            </div>
+          </div>
+          <div id="f-desk" class="row  text-center"><div class="col"><p><a href="http://www.femsa.com/es/" rel="nofollow" target="_blank" onclick="dataLayer.push({'event': 'click','category': 'click','action': 'out','label': 'Femsa'});" class=" click-out-link ">FEMSA</a></p></div> <div class="col"><p><a href="http://www.oxxoinmuebles.com.mx/" rel="nofollow" target="_blank" onclick="dataLayer.push({'event': 'click','category': 'click','action': 'out','label': 'Inmuebles'});" class=" click-out-link ">OXXO Inmuebles</a></p></div> <div class="col"><p><a href="http://oxxogas.com/" rel="nofollow" target="_blank" onclick="dataLayer.push({'event': 'click','category': 'click','action': 'out','label': 'Oxxo Gas'});" class=" click-out-link ">OXXO Gas</a></p></div> <div class="col"><p><a href="/faqs">Preguntas frecuentes</a></p></div> <div class="col"><p><a href="/responsabilidad-social">Responsabilidad social</a></p></div> <div class="col"><p><a href="https://negocios2.buzonfiscal.com/comun/html/oxxo/guia/inicio.html" rel="nofollow" target="_blank" onclick="dataLayer.push({'event': 'click','category': 'click','action': 'out','label': 'Facturacion'});">Facturación electrónica</a></p></div> <div class="col"><p><a href="https://oxxoconsultacfdi.cfdinova.com.mx/PortalConsultas" rel="nofollow" target="_blank" onclick="dataLayer.push({'event': 'click','category': 'click','action': 'out','label': 'CFDi'});">Consulta de CFDi</a></p></div> <div class="col"><p><a href="https://www.facebook.com/OXXORecluta/" rel="nofollow" target="_blank" onclick="dataLayer.push({'event': 'click','category': 'click','action': 'out','label': 'Reclutamiento'});">OXXO Reclutamiento</a></p></div> <div class="col"><p><a href="/aviso-de-privacidad">Aviso de privacidad</a></p></div> <div class="col"><p><a href="/terminos-y-condiciones">Términos y condiciones</a></p></div> <div class="col"><p><img src="https://www.oxxo.com/img/logo.png"></p></div></div>
+        </section>
+      </footer>
+    </main>
+  </body>
+</html>

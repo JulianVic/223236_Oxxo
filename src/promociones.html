@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OXXO ® | A La Vuelta de Tu Vida</title>
+    <link rel="stylesheet" href="../styles/globales.css" />
+    <link rel="stylesheet" href="../styles/inicio.css" />
+    <link rel="stylesheet" href="../styles/promociones.css" />
+    <link rel="shortcut icon" href="../img/logo-oxxo.png" type="image/x-icon" />
+    <script
+      src="https://kit.fontawesome.com/2e0e5d1ee9.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../js/glob.js"></script>
+    <script src="../js/promos.js"></script>
+  </head>
+  <body class="web-app">
+    <main>
+      <header class="wrapper pt-3">
+        <section class="top-header mg-l mg-r">
+          <div id="float-l">
+            <a
+              href="https://negocios2.buzonfiscal.com/comun/html/oxxo/guia/inicio.html"
+              class="text_dark"
+              >Facturación electrónica</a
+            >
+            <a href="https://www.oxxo.com/contacto" class="text_dark"
+              >Contacto</a
+            >
+          </div>
+          <div id="float-r">
+            <button
+              type="button"
+              id="country-button"
+              class="btn btn-primary btn-sm dropdown-toggle country-btn"
+              onclick="toggleDropdown()"
+            >
+              Tu país
+            </button>
+            <div
+              id="country-selector"
+              class="dropdown-menu country-selector"
+              style="
+                position: absolute;
+                will-change: transform;
+                top: 0px;
+                left: 0px;
+                transform: translate3d(0px, 26px, 0px);
+              "
+            >
+              <a href="https://www.oxxo.co" class="dropdown-item"> Colombia</a>
+              <a href="/inicio.html" class="dropdown-item"> México</a>
+              <a href="https://www.oxxo.cl" class="dropdown-item"> Chile</a>
+              <a href="https://www.oxxo.pe" class="dropdown-item"> Perú</a>
+              <a href="https://www.mercadooxxo.com.br" class="dropdown-item">
+                Brasil</a
+              >
+            </div>
+          </div>
+        </section>
+        <div id="oxxo-header">
+          <a href="/inicio.html">
+            <img src="/img/logo-oxxo.png" alt="" />
+          </a>
+          <div class="header-top"></div>
+          <div class="header-bottom"></div>
+        </div>
+        <nav class="navbar">
+          <div>
+            <ul class="dp-flex">
+              <li>
+                <a href="./cupones.html">Cupones</a>
+              </li>
+              <li>
+                <a href="promociones.html">Promociones</a>
+              </li>
+              <li>
+                <a href="oxxopremia.oxxo.com">Spin Premia</a>
+              </li>
+              <li>
+                <a
+                  href="https://www.spinbyoxxo.com.mx/?source_caller=ui&pid=Website_OXXO&is_retargeting=true&utm_id=OXXO.com&utm_source=Menu&shortlink=s1ti0pzf&utm_medium=Link-Menu&af_ad=Header&c=Canales_OXXO"
+                  >Spin By Oxxo</a
+                >
+              </li>
+              <li>
+                <a href="https://www.oxxoandatti.com">andatti</a>
+              </li>
+              <li class="dropdown-parent">
+                <label for="servicios" class="dropdown-toggle">Servicios</label>
+                <input type="checkbox" id="servicios" class="checkbox-toggle" />
+                <ul id="menu-vertical-servicios" class="menu-vertical">
+                  <li>
+                    <a class="dropdown-item" href="https://www.oxxocel.com"
+                      >OXXO Cel</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="https://www.oxxo.com/pagos-depositos-tarjetas"
+                      >Depósitos y retiros de efectivo</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="https://www.oxxo.com/boletos-de-autobus"
+                      >Boletos de autobús</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="https://www.oxxo.com/terminales-de-pago"
+                      >Terminales de pago</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="https://www.oxxo.com/envios-de-dinero-internacional"
+                      >Envíos de dinero internacional</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="https://www.oxxo.com/oxxo-pay"
+                      >OXXO Pay</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="https://www.oxxo.com/telefonos-celulares-smartphones"
+                      >Telefonía</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="https://www.oxxo.com/pago-de-servicios"
+                      >Pago de servicios</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="https://www.oxxo.com/tarjetas-de-regalo"
+                      >Tarjetas de regalo</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="https://www.oxxo.com/envios-de-dinero"
+                      >Envíos de dinero nacional</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="https://www.oxxo.com/otros-servicios"
+                      >Otros servicios</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="https://www.oxxo.com/quienes-somos">Quiénes somos</a>
+              </li>
+              <li class="dropdown-parent">
+                <label for="proveedores" class="dropdown-toggle"
+                  >Proveedores</label
+                >
+                <input
+                  type="checkbox"
+                  id="proveedores"
+                  class="checkbox-toggle"
+                />
+                <ul
+                  id="menu-vertical-proveedores"
+                  class="menu-vertical menu-vertical-normal"
+                >
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="https://www.oxxo.com/proveedores"
+                      >Productos y servicios en tienda</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="https://www.oxxo.com/proveedores/contratistas"
+                      >Construcción y diseño</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="dropdown-parent">
+                <label for="braices" class="dropdown-toggle"
+                  >Bienes raíces</label
+                >
+                <input type="checkbox" id="braices" class="checkbox-toggle" />
+                <ul
+                  id="menu-vertical-braices"
+                  class="menu-vertical menu-vertical-normal"
+                >
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="https://oxxoinmuebles.com.mx/ofertar-terreno/"
+                      >Ofrezco un espacio</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="https://oxxoinmuebles.com.mx"
+                      >Busco un espacio</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="https://www.oxxo.com/tiendas?source=link-menu"
+                  >Localizador de tiendas</a
+                >
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <nav id="promotions-categories">
+          <ul class="m-0 list-unstyled p-1">
+            <li class="d-inline-block active">
+              <a
+                href="https://www.oxxo.com/promociones"
+                class="d-block mx-2 py-1 px-2"
+                >Todas</a
+              >
+            </li>
+            <li id="c0" class="d-inline-block category_promotion">
+              <a
+                href="https://www.oxxo.com/promociones/abarrotes#c0"
+                class="d-block mx-2 py-1 px-2"
+                >Abarrotes</a
+              >
+            </li>
+            <li id="c1" class="d-inline-block category_promotion">
+              <a
+                href="https://www.oxxo.com/promociones/hogar#c1"
+                class="d-block mx-2 py-1 px-2"
+                >Hogar</a
+              >
+            </li>
+            <li id="c2" class="d-inline-block category_promotion">
+              <a
+                href="https://www.oxxo.com/promociones/botanas#c2"
+                class="d-block mx-2 py-1 px-2"
+                >Botanas</a
+              >
+            </li>
+            <li id="c3" class="d-inline-block category_promotion">
+              <a
+                href="https://www.oxxo.com/promociones/cerveza-vinos-y-licores#c3"
+                class="d-block mx-2 py-1 px-2"
+                >Cerveza, vinos y licores</a
+              >
+            </li>
+            <li id="c4" class="d-inline-block category_promotion">
+              <a
+                href="https://www.oxxo.com/promociones/bebidas#c4"
+                class="d-block mx-2 py-1 px-2"
+                >Bebidas</a
+              >
+            </li>
+            <li id="c5" class="d-inline-block category_promotion">
+              <a
+                href="https://www.oxxo.com/promociones/bebes#c5"
+                class="d-block mx-2 py-1 px-2"
+                >Bebés</a
+              >
+            </li>
+            <li id="c6" class="d-inline-block category_promotion">
+              <a
+                href="https://www.oxxo.com/promociones/mascotas#c6"
+                class="d-block mx-2 py-1 px-2"
+                >Mascotas</a
+              >
+            </li>
+            <li id="c7" class="d-inline-block category_promotion">
+              <a
+                href="https://www.oxxo.com/promociones/cuidado-personal#c7"
+                class="d-block mx-2 py-1 px-2"
+                >Cuidado personal</a
+              >
+            </li>
+            <li id="c8" class="d-inline-block category_promotion">
+              <a
+                href="https://www.oxxo.com/promociones/dulceria#c8"
+                class="d-block mx-2 py-1 px-2"
+                >Dulcería</a
+              >
+            </li>
+            <li id="c9" class="d-inline-block category_promotion">
+              <a
+                href="https://www.oxxo.com/promociones/lacteos-y-refrigerados#c9"
+                class="d-block mx-2 py-1 px-2"
+                >Lácteos y refrigerados</a
+              >
+            </li>
+            <li id="c10" class="d-inline-block category_promotion">
+              <a
+                href="https://www.oxxo.com/promociones/panaderia#c10"
+                class="d-block mx-2 py-1 px-2"
+                >Panadería</a
+              >
+            </li>
+            <li id="c11" class="d-inline-block category_promotion">
+              <a
+                href="https://www.oxxo.com/promociones/farmacia#c11"
+                class="d-block mx-2 py-1 px-2"
+                >Farmacia</a
+              >
+            </li>
+            <li id="c12" class="d-inline-block category_promotion">
+              <a
+                href="https://www.oxxo.com/promociones/mercancias-generales#c12"
+                class="d-block mx-2 py-1 px-2"
+                >Mercancías Generales</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <section id="promociones" data-ride="carousel" class="carousel slide">
+        <ol class="carousel-indicators">
+          <li data-target="#promociones" data-slide-to="0" class=""></li>
+          <li data-target="#promociones" data-slide-to="1" class=""></li>
+          <li data-target="#promociones" data-slide-to="2" class=""></li>
+          <li data-target="#promociones" data-slide-to="3" class="active"></li>
+        </ol>
+        <section class="carousel-inner">
+          <div
+            data-element_name="Promos Sabritas p10 2023 - Slide 1"
+            class="carousel-item"
+          >
+            <a
+              href=""
+              data-element_name="Promos Sabritas p10 2023 - Slide 1"
+              target=""
+              class="trace_event"
+              ><picture
+                ><source
+                  media="(min-width: 1001px)"
+                  srcset="
+                    https://oxxo-com.s3.amazonaws.com/carousel/promociones/32cafeea20750c9bdb7269f46de77c6f.png 2x
+                  " />
+                <source
+                  media="(min-width: 641px)"
+                  srcset="
+                    https://oxxo-com.s3.amazonaws.com/carousel/promociones/22f03a541155fdc53680eb1b24d2f212.png 2x
+                  " />
+                <source
+                  media="(max-width: 640px)"
+                  srcset="
+                    https://oxxo-com.s3.amazonaws.com/carousel/promociones/837ffe1781af1882701911464a69483b.png 2x
+                  " />
+                <img
+                  src="https://oxxo-com.s3.amazonaws.com/carousel/promociones/32cafeea20750c9bdb7269f46de77c6f.png"
+                  alt="Promos Sabritas p10 2023"
+                  title="Promos Sabritas p10 2023"
+                  class="six-slide" /></picture
+            ></a>
+          </div>
+          <div
+            data-element_name="Promos Mondelez p10 2023 - Slide 2"
+            class="carousel-item"
+          >
+            <a
+              href=""
+              data-element_name="Promos Mondelez p10 2023 - Slide 2"
+              target=""
+              class="trace_event"
+              ><picture
+                ><source
+                  media="(min-width: 1001px)"
+                  srcset="
+                    https://oxxo-com.s3.amazonaws.com/carousel/promociones/e911f1201a2c661c476360c95c67fa17.png 2x
+                  " />
+                <source
+                  media="(min-width: 641px)"
+                  srcset="
+                    https://oxxo-com.s3.amazonaws.com/carousel/promociones/08211094bda9718b56ecd3906f59659e.png 2x
+                  " />
+                <source
+                  media="(max-width: 640px)"
+                  srcset="
+                    https://oxxo-com.s3.amazonaws.com/carousel/promociones/4ccc4c9ed421728ee8055d3a54182ac7.png 2x
+                  " />
+                <img
+                  src="https://oxxo-com.s3.amazonaws.com/carousel/promociones/e911f1201a2c661c476360c95c67fa17.png"
+                  alt="Promos Mondelez p10 2023"
+                  title="Promos Mondelez p10 2023"
+                  class="six-slide" /></picture
+            ></a>
+          </div>
+          <div
+            data-element_name="Promos Nestle p10 2023 - Slide 3"
+            class="carousel-item"
+          >
+            <a
+              href=""
+              data-element_name="Promos Nestle p10 2023 - Slide 3"
+              target=""
+              class="trace_event"
+              ><picture
+                ><source
+                  media="(min-width: 1001px)"
+                  srcset="
+                    https://oxxo-com.s3.amazonaws.com/carousel/promociones/af9518b4ddb33526bd5f299d8892366f.png 2x
+                  " />
+                <source
+                  media="(min-width: 641px)"
+                  srcset="
+                    https://oxxo-com.s3.amazonaws.com/carousel/promociones/6cfb9f0d5f3c6ada5db85760ac557fff.png 2x
+                  " />
+                <source
+                  media="(max-width: 640px)"
+                  srcset="
+                    https://oxxo-com.s3.amazonaws.com/carousel/promociones/f96f103747b07dceefb098bf3ff64f98.png 2x
+                  " />
+                <img
+                  src="https://oxxo-com.s3.amazonaws.com/carousel/promociones/af9518b4ddb33526bd5f299d8892366f.png"
+                  alt="Promos Nestle p10 2023"
+                  title="Promos Nestle p10 2023"
+                  class="six-slide" /></picture
+            ></a>
+          </div>
+          <div
+            data-element_name="Promos Epura p10 2023 - Slide 4"
+            class="carousel-item active"
+          >
+            <a
+              href=""
+              data-element_name="Promos Epura p10 2023 - Slide 4"
+              target=""
+              class="trace_event"
+              ><picture
+                ><source
+                  media="(min-width: 1001px)"
+                  srcset="
+                    https://oxxo-com.s3.amazonaws.com/carousel/promociones/b750bdfb5b2af372b6ecc7c3e799427b.png 2x
+                  " />
+                <source
+                  media="(min-width: 641px)"
+                  srcset="
+                    https://oxxo-com.s3.amazonaws.com/carousel/promociones/996755a229da68745e3269c1dccdfd5b.png 2x
+                  " />
+                <source
+                  media="(max-width: 640px)"
+                  srcset="
+                    https://oxxo-com.s3.amazonaws.com/carousel/promociones/b343a479b5d11a6066ed1261fbca8a16.png 2x
+                  " />
+                <img
+                  src="https://oxxo-com.s3.amazonaws.com/carousel/promociones/b750bdfb5b2af372b6ecc7c3e799427b.png"
+                  alt="Promos Epura p10 2023"
+                  title="Promos Epura p10 2023"
+                  class="six-slide" /></picture
+            ></a>
+          </div>
+        </section>
+        <a
+          href="#promociones"
+          role="button"
+          data-slide="prev"
+          class="carousel-control-prev"
+          ><span aria-hidden="true" class="carousel-control-prev-icon"></span>
+          <span class="sr-only">Previous</span></a
+        >
+        <a
+          href="#promociones"
+          role="button"
+          data-slide="next"
+          class="carousel-control-next"
+          ><span aria-hidden="true" class="carousel-control-next-icon"></span>
+          <span class="sr-only">Next</span></a
+        >
+      </section>
+      <div class="container-fluid bg-white">
+        <div class="results row">
+          <div class="col-md-6 text-center text-md-left py-1 py-md-3">
+            <strong>227</strong> promociones disponibles.
+          </div>
+          <div class="col-md-6 pt-0 pb-2 py-md-3">
+            <div class="d-flex w-100">
+              <button
+                data-toggle="modal"
+                data-target="#modal2"
+                class="btn btn-xs btn-danger mr-2"
+                style="min-width: fit-content"
+              >
+                Mi ciudad
+
+                <i class="fas fa-map-marker-alt"></i>
+              </button>
+              <form action="https://www.oxxo.com/promociones" class="w-100">
+                <div class="input-group">
+                  <input
+                    type="text"
+                    name="s"
+                    placeholder="Buscar promoción"
+                    value=""
+                    class="form-control"
+                    style="
+                      background: rgb(240, 243, 245);
+                      border-color: rgb(231, 233, 235);
+                    "
+                  />
+                  <div class="input-group-append">
+                    <button type="submit" class="btn btn-danger">
+                      <i class="fas fa-search"></i>
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col text-center">
+            <div class="text-center brands-filter mb-3">
+              <a
+                href="https://www.oxxo.com/promociones?f=all"
+                class="mb-2 btn btn-lg px-4 btn-outline-primary active"
+              >
+                Todas
+              </a>
+              <a
+                href="https://www.oxxo.com/promociones?f=spin"
+                class="mb-2 btn btn-sm px-4 btn-outline-primary text-primary"
+                ><img
+                  src="https://www.oxxo.com/img/logo-spin.png"
+                  alt="Spin"
+                  height="35"
+                  class="p-1"
+              /></a>
+              <a
+                href="https://www.oxxo.com/promociones?f=premia"
+                class="mb-2 btn btn-sm px-4 btn-outline-primary text-primary"
+                ><img
+                  src="https://www.oxxo.com/img/SPIN_PREMIA.png"
+                  alt="Spin"
+                  height="35"
+                  class="p-1"
+              /></a>
+              <a
+                href="https://www.oxxo.com/promociones?f=relampago"
+                class="mb-2 btn btn-sm px-4 btn-outline-primary text-primary"
+                ><img
+                  src="https://www.oxxo.com/img/logo-relampago.png"
+                  alt="Spin"
+                  height="35"
+                  class="p-1"
+                />
+                Promos relámpago
+              </a>
+            </div>
+            <div id="promociones-container" class="row">
+              <div class="col-6 col-md-4 col-lg-3 col-xl-2 promotion_image">
+                <div class="featured">PROMO DESTACADA</div>
+                <img
+                  src="https://oxxo-com.s3.amazonaws.com/promociones/2023/WPaySIieRE8P6gGXfVsZXw3inOw07ANCRMQOWhQF.png"
+                  onclick="open_promo_image('https://oxxo-com.s3.amazonaws.com/promociones/2023/WPaySIieRE8P6gGXfVsZXw3inOw07ANCRMQOWhQF.png','maseca','Abarrotes','7462','Vigencia al 5 de octubre del 2023');"
+                  alt="maseca"
+                  title="maseca"
+                  class="img-fluid"
+                  style="cursor: pointer"
+                />
+              </div>
+              <div class="col-6 col-md-4 col-lg-3 col-xl-2 promotion_image">
+                <div class="featured">PROMO DESTACADA</div>
+                <img
+                  src="https://oxxo-com.s3.amazonaws.com/promociones/2023/6YIniixE8vDgVCpQnSKIMITzZWErRBqPxHPKUqNZ.png"
+                  onclick="open_promo_image('https://oxxo-com.s3.amazonaws.com/promociones/2023/6YIniixE8vDgVCpQnSKIMITzZWErRBqPxHPKUqNZ.png','Del Valle','Bebidas','7461','Vigencia al 5 de octubre de 2023');"
+                  alt="Del Valle"
+                  title="Del Valle"
+                  class="img-fluid"
+                  style="cursor: pointer"
+                />
+              </div>
+              <div class="col-6 col-md-4 col-lg-3 col-xl-2 promotion_image">
+                <div class="featured">PROMO DESTACADA</div>
+                <img
+                  src="https://oxxo-com.s3.amazonaws.com/promociones/2023/k9YvHJlwPAKbWBLPipq1iaQjGRsD0QrvpqZgRyA7.png"
+                  onclick="open_promo_image('https://oxxo-com.s3.amazonaws.com/promociones/2023/k9YvHJlwPAKbWBLPipq1iaQjGRsD0QrvpqZgRyA7.png','Marinela','Panadería','7460','Vigencia al 5 de octibre de 2023');"
+                  alt="Marinela"
+                  title="Marinela"
+                  class="img-fluid"
+                  style="cursor: pointer"
+                />
+              </div>
+              <div class="col-6 col-md-4 col-lg-3 col-xl-2 promotion_image">
+                <div class="featured">PROMO DESTACADA</div>
+                <img
+                  src="https://oxxo-com.s3.amazonaws.com/promociones/2023/9IAsSBUmuiKSwOATrWtL2ItiCkE7S5ocJnguSvXH.png"
+                  onclick="open_promo_image('https://oxxo-com.s3.amazonaws.com/promociones/2023/9IAsSBUmuiKSwOATrWtL2ItiCkE7S5ocJnguSvXH.png','kitkat','Abarrotes','7459','Vigencial al 5 de octubre de 2023');"
+                  alt="kitkat"
+                  title="kitkat"
+                  class="img-fluid"
+                  style="cursor: pointer"
+                />
+              </div>
+              <div class="col-6 col-md-4 col-lg-3 col-xl-2 promotion_image">
+                <img
+                  src="https://oxxo-com.s3.amazonaws.com/promociones/2023/p10/201793.png"
+                  onclick="open_promo_image('https://oxxo-com.s3.amazonaws.com/promociones/2023/p10/201793.png','Cepillo Oral B Complete 40 mediano','Cuidado personal','7365','Vigencia del 07 de septiembre al 04 de octubre de 2023 o hasta agotar existencias. No aplica con otras promociones. Sujeto a disponibilidad. No aplica en compra individual. APLICA UNICAMENTE EL DIA INDICADO EN COMUNICACION.');"
+                  alt="Cepillo Oral B Complete 40 mediano"
+                  title="Cepillo Oral B Complete 40 mediano"
+                  class="img-fluid"
+                  style="cursor: pointer"
+                />
+              </div>
+              <div class="col-6 col-md-4 col-lg-3 col-xl-2 promotion_image">
+                <img
+                  src="https://oxxo-com.s3.amazonaws.com/promociones/2023/p10/201733.png"
+                  onclick="open_promo_image('https://oxxo-com.s3.amazonaws.com/promociones/2023/p10/201733.png','Snickers Espresso 41.5g','Dulcería','7373','Vigencia del 07 de septiembre al 04 de octubre de 2023 o hasta agotar existencias. No aplica con otras promociones. Sujeto a disponibilidad. No aplica en compra individual. APLICA UNICAMENTE EL DIA INDICADO EN COMUNICACION.');"
+                  alt="Snickers Espresso 41.5g"
+                  title="Snickers Espresso 41.5g"
+                  class="img-fluid"
+                  style="cursor: pointer"
+                />
+              </div>
+              <div class="col-6 col-md-4 col-lg-3 col-xl-2 promotion_image">
+                <img
+                  src="https://oxxo-com.s3.amazonaws.com/promociones/2023/p10/201667.png"
+                  onclick="open_promo_image('https://oxxo-com.s3.amazonaws.com/promociones/2023/p10/201667.png','Doublemint 12.5g 5s','Dulcería','7372','Vigencia del 07 de septiembre al 04 de octubre de 2023 o hasta agotar existencias. No aplica con otras promociones. Sujeto a disponibilidad. No aplica en compra individual. APLICA UNICAMENTE EL DIA INDICADO EN COMUNICACION.');"
+                  alt="Doublemint 12.5g 5s"
+                  title="Doublemint 12.5g 5s"
+                  class="img-fluid"
+                  style="cursor: pointer"
+                />
+              </div>
+              <div class="col-6 col-md-4 col-lg-3 col-xl-2 promotion_image">
+                <img
+                  src="https://oxxo-com.s3.amazonaws.com/promociones/2023/p10/201798.png"
+                  onclick="open_promo_image('https://oxxo-com.s3.amazonaws.com/promociones/2023/p10/201798.png','Skwinkles Chunks 45g','Dulcería','7371','Vigencia del 07 de septiembre al 04 de octubre de 2023 o hasta agotar existencias. No aplica con otras promociones. Sujeto a disponibilidad. No aplica en compra individual. APLICA UNICAMENTE EL DIA INDICADO EN COMUNICACION.');"
+                  alt="Skwinkles Chunks 45g"
+                  title="Skwinkles Chunks 45g"
+                  class="img-fluid"
+                  style="cursor: pointer"
+                />
+              </div>
+              <div class="col-6 col-md-4 col-lg-3 col-xl-2 promotion_image">
+                <img
+                  src="https://oxxo-com.s3.amazonaws.com/promociones/2023/p10/201657.png"
+                  onclick="open_promo_image('https://oxxo-com.s3.amazonaws.com/promociones/2023/p10/201657.png','Mexicana original 600ml','Bebidas','7370','Vigencia del 07 de septiembre al 04 de octubre de 2023 o hasta agotar existencias. No aplica con otras promociones. Sujeto a disponibilidad. No aplica en compra individual. APLICA UNICAMENTE EL DIA INDICADO EN COMUNICACION.');"
+                  alt="Mexicana original 600ml"
+                  title="Mexicana original 600ml"
+                  class="img-fluid"
+                  style="cursor: pointer"
+                />
+              </div>
+              <div class="col-6 col-md-4 col-lg-3 col-xl-2 promotion_image">
+                <img
+                  src="https://oxxo-com.s3.amazonaws.com/promociones/2023/p10/201699.png"
+                  onclick="open_promo_image('https://oxxo-com.s3.amazonaws.com/promociones/2023/p10/201699.png','Dolores ensalada con mayonesa Maxi Cup Can 240g','Abarrotes','7369','Vigencia del 07 de septiembre al 04 de octubre de 2023 o hasta agotar existencias. No aplica con otras promociones. Sujeto a disponibilidad. No aplica en compra individual. APLICA UNICAMENTE EL DIA INDICADO EN COMUNICACION.');"
+                  alt="Dolores ensalada con mayonesa Maxi Cup Can 240g"
+                  title="Dolores ensalada con mayonesa Maxi Cup Can 240g"
+                  class="img-fluid"
+                  style="cursor: pointer"
+                />
+              </div>
+              <div class="col-6 col-md-4 col-lg-3 col-xl-2 promotion_image">
+                <img
+                  src="https://oxxo-com.s3.amazonaws.com/promociones/2023/p10/201649.png"
+                  onclick="open_promo_image('https://oxxo-com.s3.amazonaws.com/promociones/2023/p10/201649.png','Cono para helados Bitz 81g 6pzas','Lácteos y refrigerados','7368','Vigencia del 07 de septiembre al 04 de octubre de 2023 o hasta agotar existencias. No aplica con otras promociones. Sujeto a disponibilidad. No aplica en compra individual. APLICA UNICAMENTE EL DIA INDICADO EN COMUNICACION.');"
+                  alt="Cono para helados Bitz 81g 6pzas"
+                  title="Cono para helados Bitz 81g 6pzas"
+                  class="img-fluid"
+                  style="cursor: pointer"
+                />
+              </div>
+              <div class="col-6 col-md-4 col-lg-3 col-xl-2 promotion_image">
+                <img
+                  src="https://oxxo-com.s3.amazonaws.com/promociones/2023/p10/201787.png"
+                  onclick="open_promo_image('https://oxxo-com.s3.amazonaws.com/promociones/2023/p10/201787.png','Pinol aromas lavanda 1L','Hogar','7364','Vigencia del 07 de septiembre al 04 de octubre de 2023 o hasta agotar existencias. No aplica con otras promociones. Sujeto a disponibilidad. No aplica en compra individual. APLICA UNICAMENTE EL DIA INDICADO EN COMUNICACION.');"
+                  alt="Pinol aromas lavanda 1L"
+                  title="Pinol aromas lavanda 1L"
+                  class="img-fluid"
+                  style="cursor: pointer"
+                />
+              </div>
+              <div class="col-6 col-md-4 col-lg-3 col-xl-2 promotion_image">
+                <img
+                  src="https://oxxo-com.s3.amazonaws.com/promociones/2023/p10/201684.png"
+                  onclick="open_promo_image('https://oxxo-com.s3.amazonaws.com/promociones/2023/p10/201684.png','Atun Cup Can Tajin con elote 135g','Abarrotes','7361','Vigencia del 07 de septiembre al 04 de octubre de 2023 o hasta agotar existencias. No aplica con otras promociones. Sujeto a disponibilidad. No aplica en compra individual. APLICA UNICAMENTE EL DIA INDICADO EN COMUNICACION.');"
+                  alt="Atun Cup Can Tajin con elote 135g"
+                  title="Atun Cup Can Tajin con elote 135g"
+                  class="img-fluid"
+                  style="cursor: pointer"
+                />
+              </div>
+              <div class="col-6 col-md-4 col-lg-3 col-xl-2 promotion_image">
+                <img
+                  src="https://oxxo-com.s3.amazonaws.com/promociones/2023/p10/202118.png"
+                  onclick="open_promo_image('https://oxxo-com.s3.amazonaws.com/promociones/2023/p10/202118.png','Lysol aerosol Crisp 346g','Hogar','7362','Vigencia del 07 de septiembre al 04 de octubre de 2023 o hasta agotar existencias. No aplica con otras promociones. Sujeto a disponibilidad. No aplica en compra individual. APLICA UNICAMENTE EL DIA INDICADO EN COMUNICACION.');"
+                  alt="Lysol aerosol Crisp 346g"
+                  title="Lysol aerosol Crisp 346g"
+                  class="img-fluid"
+                  style="cursor: pointer"
+                />
+              </div>
+              <div class="col-6 col-md-4 col-lg-3 col-xl-2 promotion_image">
+                <img
+                  src="https://oxxo-com.s3.amazonaws.com/promociones/2023/p10/202119.png"
+                  onclick="open_promo_image('https://oxxo-com.s3.amazonaws.com/promociones/2023/p10/202119.png','Lysol desinfectante multiusos citrus 820ml','Hogar','7363','Vigencia del 07 de septiembre al 04 de octubre de 2023 o hasta agotar existencias. No aplica con otras promociones. Sujeto a disponibilidad. No aplica en compra individual. APLICA UNICAMENTE EL DIA INDICADO EN COMUNICACION.');"
+                  alt="Lysol desinfectante multiusos citrus 820ml"
+                  title="Lysol desinfectante multiusos citrus 820ml"
+                  class="img-fluid"
+                  style="cursor: pointer"
+                />
+              </div>
+              <div class="col-6 col-md-4 col-lg-3 col-xl-2 promotion_image">
+                <img
+                  src="https://oxxo-com.s3.amazonaws.com/promociones/2023/p10/201701.png"
+                  onclick="open_promo_image('https://oxxo-com.s3.amazonaws.com/promociones/2023/p10/201701.png','Pulparindo gigante de la Rosa 28g','Dulcería','7367','Vigencia del 07 de septiembre al 04 de octubre de 2023 o hasta agotar existencias. No aplica con otras promociones. Sujeto a disponibilidad. No aplica en compra individual. APLICA UNICAMENTE EL DIA INDICADO EN COMUNICACION.');"
+                  alt="Pulparindo gigante de la Rosa 28g"
+                  title="Pulparindo gigante de la Rosa 28g"
+                  class="img-fluid"
+                  style="cursor: pointer"
+                />
+              </div>
+              <div class="col-6 col-md-4 col-lg-3 col-xl-2 promotion_image">
+                <img
+                  src="https://oxxo-com.s3.amazonaws.com/promociones/2023/p10/201760.png"
+                  onclick="open_promo_image('https://oxxo-com.s3.amazonaws.com/promociones/2023/p10/201760.png','Skittles gomitas 50g','Dulcería','7376','Vigencia del 07 de septiembre al 04 de octubre de 2023 o hasta agotar existencias. No aplica con otras promociones. Sujeto a disponibilidad. No aplica en compra individual. APLICA UNICAMENTE EL DIA INDICADO EN COMUNICACION.');"
+                  alt="Skittles gomitas 50g"
+                  title="Skittles gomitas 50g"
+                  class="img-fluid"
+                  style="cursor: pointer"
+                />
+              </div>
+              <div class="col-6 col-md-4 col-lg-3 col-xl-2 promotion_image">
+                <img
+                  src="https://oxxo-com.s3.amazonaws.com/promociones/2023/p10/201855.png"
+                  onclick="open_promo_image('https://oxxo-com.s3.amazonaws.com/promociones/2023/p10/201855.png','Galletas Crackets Gamesa 135g','Panadería','7366','Vigencia del 07 de septiembre al 04 de octubre de 2023 o hasta agotar existencias. No aplica con otras promociones. Sujeto a disponibilidad. No aplica en compra individual. APLICA UNICAMENTE EL DIA INDICADO EN COMUNICACION.');"
+                  alt="Galletas Crackets Gamesa 135g"
+                  title="Galletas Crackets Gamesa 135g"
+                  class="img-fluid"
+                  style="cursor: pointer"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <ul role="navigation" class="pagination justify-content-center mt-5">
+          <li
+            aria-disabled="true"
+            aria-label="« Anterior"
+            class="page-item disabled"
+          >
+            <span aria-hidden="true" class="page-link">‹</span>
+          </li>
+          <li aria-current="page" class="page-item active">
+            <span class="page-link">1</span>
+          </li>
+          <li class="page-item">
+            <a href="https://www.oxxo.com/promociones?page=2" class="page-link"
+              >2</a
+            >
+          </li>
+          <li class="page-item">
+            <a href="https://www.oxxo.com/promociones?page=3" class="page-link"
+              >3</a
+            >
+          </li>
+          <li class="page-item">
+            <a href="https://www.oxxo.com/promociones?page=4" class="page-link"
+              >4</a
+            >
+          </li>
+          <li class="page-item">
+            <a href="https://www.oxxo.com/promociones?page=5" class="page-link"
+              >5</a
+            >
+          </li>
+          <li class="page-item">
+            <a href="https://www.oxxo.com/promociones?page=6" class="page-link"
+              >6</a
+            >
+          </li>
+          <li class="page-item">
+            <a href="https://www.oxxo.com/promociones?page=7" class="page-link"
+              >7</a
+            >
+          </li>
+          <li class="page-item">
+            <a href="https://www.oxxo.com/promociones?page=8" class="page-link"
+              >8</a
+            >
+          </li>
+          <li aria-disabled="true" class="page-item disabled">
+            <span class="page-link">...</span>
+          </li>
+          <li class="page-item">
+            <a href="https://www.oxxo.com/promociones?page=12" class="page-link"
+              >12</a
+            >
+          </li>
+          <li class="page-item">
+            <a href="https://www.oxxo.com/promociones?page=13" class="page-link"
+              >13</a
+            >
+          </li>
+          <li class="page-item">
+            <a
+              href="https://www.oxxo.com/promociones?page=2"
+              rel="next"
+              aria-label="Siguiente »"
+              class="page-link"
+              >›</a
+            >
+          </li>
+        </ul>
+      </div>
+      <footer class="footer">
+        <section class="container">
+          <div class="row">
+            <div class="col-sm-8 offset-sm-2 text-center">
+              <h6>¡Síguenos en nuestras Redes Sociales!</h6>
+              <p>
+                <a
+                  href="https://www.facebook.com/OXXOTiendas"
+                  class="icon-footer-font"
+                  ><i class="fa-brands fa-facebook fa-lg"></i
+                ></a>
+                <a
+                  href="https://twitter.com/Tiendas_OXXO"
+                  class="icon-footer-font"
+                  ><i class="fab fa-twitter fa-lg"></i
+                ></a>
+                <a
+                  href="https://www.instagram.com/tiendasoxxo/"
+                  class="icon-footer-font"
+                  ><i class="fab fa-instagram fa-lg"></i
+                ></a>
+                <a
+                  href="https://www.youtube.com/user/tiendaoxxo"
+                  class="icon-footer-font"
+                  ><i class="fab fa-youtube fa-lg"></i
+                ></a>
+              </p>
+            </div>
+          </div>
+          <div id="f-desk" class="row text-center">
+            <div class="col">
+              <p>
+                <a
+                  href="http://www.femsa.com/es/"
+                  rel="nofollow"
+                  target="_blank"
+                  onclick="dataLayer.push({'event': 'click','category': 'click','action': 'out','label': 'Femsa'});"
+                  class="click-out-link"
+                  >FEMSA</a
+                >
+              </p>
+            </div>
+            <div class="col">
+              <p>
+                <a
+                  href="http://www.oxxoinmuebles.com.mx/"
+                  rel="nofollow"
+                  target="_blank"
+                  onclick="dataLayer.push({'event': 'click','category': 'click','action': 'out','label': 'Inmuebles'});"
+                  class="click-out-link"
+                  >OXXO Inmuebles</a
+                >
+              </p>
+            </div>
+            <div class="col">
+              <p>
+                <a
+                  href="http://oxxogas.com/"
+                  rel="nofollow"
+                  target="_blank"
+                  onclick="dataLayer.push({'event': 'click','category': 'click','action': 'out','label': 'Oxxo Gas'});"
+                  class="click-out-link"
+                  >OXXO Gas</a
+                >
+              </p>
+            </div>
+            <div class="col">
+              <p><a href="/faqs">Preguntas frecuentes</a></p>
+            </div>
+            <div class="col">
+              <p>
+                <a href="/responsabilidad-social">Responsabilidad social</a>
+              </p>
+            </div>
+            <div class="col">
+              <p>
+                <a
+                  href="https://negocios2.buzonfiscal.com/comun/html/oxxo/guia/inicio.html"
+                  rel="nofollow"
+                  target="_blank"
+                  onclick="dataLayer.push({'event': 'click','category': 'click','action': 'out','label': 'Facturacion'});"
+                  >Facturación electrónica</a
+                >
+              </p>
+            </div>
+            <div class="col">
+              <p>
+                <a
+                  href="https://oxxoconsultacfdi.cfdinova.com.mx/PortalConsultas"
+                  rel="nofollow"
+                  target="_blank"
+                  onclick="dataLayer.push({'event': 'click','category': 'click','action': 'out','label': 'CFDi'});"
+                  >Consulta de CFDi</a
+                >
+              </p>
+            </div>
+            <div class="col">
+              <p>
+                <a
+                  href="https://www.facebook.com/OXXORecluta/"
+                  rel="nofollow"
+                  target="_blank"
+                  onclick="dataLayer.push({'event': 'click','category': 'click','action': 'out','label': 'Reclutamiento'});"
+                  >OXXO Reclutamiento</a
+                >
+              </p>
+            </div>
+            <div class="col">
+              <p><a href="/aviso-de-privacidad">Aviso de privacidad</a></p>
+            </div>
+            <div class="col">
+              <p>
+                <a href="/terminos-y-condiciones">Términos y condiciones</a>
+              </p>
+            </div>
+            <div class="col">
+              <p><img src="https://www.oxxo.com/img/logo.png" /></p>
+            </div>
+          </div>
+        </section>
+      </footer>
+    </main>
+  </body>
+</html>
